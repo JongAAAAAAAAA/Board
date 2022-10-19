@@ -13,6 +13,6 @@ public interface BoardMapper {
     public BoardDTO selectBoardDetail(Long idx);
     public int updateBoard(BoardDTO params);
     public int deleteBoard(Long idx);
-    public List<BoardDTO> selectBoardList(Criteria criteria);
-    public int selectBoardTotalCount(Criteria criteria);
+    public List<BoardDTO> selectBoardList(Criteria criteria); //게시글 목록 조회
+    public int selectBoardTotalCount(Criteria criteria); // delete_yn이 'N'으로 지정된 게시글 개수 조회
 }

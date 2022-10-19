@@ -18,7 +18,6 @@ import java.util.List;
 
 @Controller // 사용자의 요청/응답을 처리하는 컨트롤러 클래스임을 선언
 public class BoardController extends UiUtils {
-
     @Autowired
     private BoardService boardService;
 
@@ -103,6 +102,7 @@ public class BoardController extends UiUtils {
         } catch (DataAccessException e) {
             // TODO: handle exception
             return showMessageWithRedirect("데이터베이스 처리 과정에 문제가 발생하였습니다.", "/board/list.do", Method.GET, null, model);
+
         } catch (Exception e) {
             // TODO: handle exception
             return showMessageWithRedirect("시스템에 문제가 발생하였습니다.", "/board/list.do", Method.GET, null, model);

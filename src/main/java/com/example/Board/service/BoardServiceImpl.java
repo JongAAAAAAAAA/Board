@@ -20,12 +20,12 @@ public class BoardServiceImpl implements BoardService{
         int queryResult = 0;
 
         if (params.getIdx() == null){
-            // 쿼리가 정상적으로 실행되면 1을 반환함.
+            // 쿼리가 정상적으로 실행되면 1을 반환함. (insert 성공 시 1 반환 (mybatis 문법))
             queryResult = boardMapper.insertBoard(params);
         } else {
             queryResult = boardMapper.updateBoard(params);
         }
-        // 정상적으로 실행되면 true, 아니면 false로 반환
+        // 정상적으로 실행되면(1이 반환됐으면) true, 아니면(:) false로 반환
         return (queryResult == 1) ? true : false;
     }
 
