@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class BoardDTO {
+public class BoardDTO extends CommonDTO {
 
     private Long idx; //글 번호(PK)
     private String title; //글 제목
